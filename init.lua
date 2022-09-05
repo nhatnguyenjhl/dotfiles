@@ -3,6 +3,7 @@
 -- In windows run file ./scripts/install_packer_for_windows.bat in the first using
 
 --Auto install Packer if it doesn't exist
+
 if vim.fn.has('win32') == 0 then
     local home_dir = '/home/'..os.getenv("USER")
     local packer_path = '/.local/share/nvim/site/pack/packer/start/packer.nvim'
@@ -11,6 +12,9 @@ if vim.fn.has('win32') == 0 then
     	vim.cmd(git_cmd..' ~'..packer_path)
     end
 end
+-- Set hosts for python
+vim.g.python_host_prog = '/usr/bin/python'
+vim.g.python3_host_prog = '/usr/bin/python3'
 require('plugins')
 require('env.summary')
 require('core.summary')

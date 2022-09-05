@@ -24,7 +24,7 @@ local lsp_flags = {
 
 require('lspconfig').pyright.setup{
     on_attach = on_attach,
-    --flags = lsp_flags,
+    flags = lsp_flags,
 }
 
 --Completion
@@ -33,8 +33,8 @@ vim.g.coq_settings = {
     auto_start = true,
     --display = {
     --	pum = {
-    --	    --Disable auto cleared old results on keystroke
-    --	    fast_close = false,
+    --	    --Disable or enable auto cleared old results on keystroke
+    --	    fast_close = true,
     --	}
     --},
     --limits = {
